@@ -1,0 +1,14 @@
+{
+	"version": 3,
+	"file": "../scss/noam.css",
+	"sources": [
+		"../scss/noam.scss",
+		"../scss/_reset.scss"
+	],
+	"sourcesContent": [
+		"$font-stack:    Helvetica, sans-serif;\r\n$primary-color: #333;\r\n\r\nbody {\r\n  font: 100% $font-stack;\r\n  color: $primary-color;\r\n}\r\n\r\n\r\n@import 'reset';\r\n\r\n\r\nnav {\r\n    ul {\r\n      margin: 0;\r\n      padding: 0;\r\n      list-style: none;\r\n    }\r\n  \r\n    li { display: inline-block; }\r\n  \r\n    a {\r\n      display: block;\r\n      padding: 6px 12px;\r\n      text-decoration: none;\r\n    }\r\n  }\r\n  \r\n/* This CSS will print because %message-shared is extended. */\r\n%message-shared {\r\n    border: 1px solid #ccc;\r\n    padding: 10px;\r\n    color: #333;\r\n  }\r\n  \r\n  // This CSS won't print because %equal-heights is never extended.\r\n  %equal-heights {\r\n    display: flex;\r\n    flex-wrap: wrap;\r\n  }\r\n  \r\n  .message {\r\n    @extend %message-shared;\r\n  }\r\n  \r\n  .success {\r\n    @extend %message-shared;\r\n    border-color: green;\r\n  }\r\n  \r\n  .error {\r\n    @extend %message-shared;\r\n    border-color: red;\r\n  }\r\n  \r\n  .warning {\r\n    @extend %message-shared;\r\n    border-color: yellow;\r\n  }\r\n  ",
+		"html,\r\nbody,\r\nul,\r\nol {\r\n  margin:  0;\r\n  padding: 0;\r\n}\r\n\r\nbody {\r\n  font: 100% Helvetica, sans-serif;\r\n  background-color: #efefef;\r\n}\r\n\r\n\r\n@mixin transform($property) {\r\n  -webkit-transform: $property;\r\n  -ms-transform: $property;\r\n  transform: $property;\r\n}\r\n\r\n.box, img { @include transform(rotate(30deg)); }\r\n\r\np {\r\n  @include transform(rotate(30deg));\r\n  color:red;\r\n}\r\n\r\n\r\n"
+	],
+	"mappings": ";AAGA,AAAA,IAAI,CAAC;EACH,IAAI,EAAE,IAAI,CAJI,SAAS,EAAE,UAAU;EAKnC,KAAK,EAJS,IAAI;CAKnB;;;ACND,AAAA,IAAI;AACJ,AAAA,IAAI;AACJ,AAAA,EAAE;AACF,AAAA,EAAE,CAAC;EACD,MAAM,EAAG,CAAE;EACX,OAAO,EAAE,CAAE;CACZ;;;AAED,AAAA,IAAI,CAAC;EACH,IAAI,EAAE,0BAA2B;EACjC,gBAAgB,EAAE,OAAQ;CAC3B;;;AASD,AAAA,IAAI,EAAE,AAAA,GAAG,CAAC;EALR,iBAAiB,EAKY,aAAM;EAJnC,aAAa,EAIgB,aAAM;EAHnC,SAAS,EAGoB,aAAM;CAAY;;;AAEjD,AAAA,CAAC,CAAC;EAPA,iBAAiB,EAQE,aAAM;EAPzB,aAAa,EAOM,aAAM;EANzB,SAAS,EAMU,aAAM;EACzB,KAAK,EAAC,GAAI;CACX;;;ADbD,AACI,GADD,CACC,EAAE,CAAC;EACD,MAAM,EAAE,CAAE;EACV,OAAO,EAAE,CAAE;EACX,UAAU,EAAE,IAAK;CAClB;;;AALL,AAOI,GAPD,CAOC,EAAE,CAAC;EAAE,OAAO,EAAE,YAAa;CAAI;;;AAPnC,AASI,GATD,CASC,CAAC,CAAC;EACA,OAAO,EAAE,KAAM;EACf,OAAO,EAAE,QAAS;EAClB,eAAe,EAAE,IAAK;CACvB;;AAGL,8DAA8D;;AAa5D,AAZF,QAYU,EAIR,AAhBF,QAgBU,EAKR,AArBF,MAqBQ,EAKN,AA1BF,QA0BU,CA1BM;EACZ,MAAM,EAAE,cAAe;EACvB,OAAO,EAAE,IAAK;EACd,KAAK,EAAE,IAAK;CACb;;;AAYD,AAAA,QAAQ,CAAC;EAEP,YAAY,EAAE,KAAM;CACrB;;;AAED,AAAA,MAAM,CAAC;EAEL,YAAY,EAAE,GAAI;CACnB;;;AAED,AAAA,QAAQ,CAAC;EAEP,YAAY,EAAE,MAAO;CACtB",
+	"names": []
+}

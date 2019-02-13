@@ -1,0 +1,76 @@
+$font-stack:    Helvetica, sans-serif;
+$primary-color: #333;
+$font-noam: 15px;
+
+body {
+  font-size: $font-noam + 9;
+  color: $primary-color;
+}
+
+@mixin clearfix($width) {
+
+   @if $width == 'auto' {
+
+    // if width is not passed, or empty do this
+
+   } @else {
+        display: inline-block;
+        width: $width;
+   }
+}
+
+
+@import 'reset';
+
+
+nav {
+    ul {
+        @include clearfix(auto);
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+  
+    li { display: inline-block; }
+  
+    a {
+        @include clearfix(15px);
+
+      display: block;
+      padding: 6px 12px;
+      text-decoration: none;
+    }
+  }
+  
+/* This CSS will print because %message-shared is extended. */
+%message-shared {
+    border: 1px solid #ccc;
+    padding: 10px;
+    color: #333;
+  }
+  
+  // This CSS won't print because %equal-heights is never extended.
+  %equal-heights {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .message {
+    @extend %message-shared;
+  }
+  
+  .success {
+    @extend %message-shared;
+    border-color: green;
+  }
+  
+  .error {
+    @extend %message-shared;
+    border-color: red;
+  }
+  
+  .warning {
+    @extend %message-shared;
+    border-color: yellow;
+  }
+  

@@ -1,0 +1,28 @@
+html,
+body,
+ul,
+ol {
+  margin:  0;
+  padding: 0;
+}
+
+body {
+  font: 100% Helvetica, sans-serif;
+  background-color: #efefef;
+}
+
+
+@mixin transform($property) {
+  -webkit-transform: $property;
+  -ms-transform: $property;
+  transform: $property;
+}
+
+.box, img { @include transform(rotate(30deg)); }
+
+p {
+  @include transform(rotate(30deg));
+  color:red;
+}
+
+
