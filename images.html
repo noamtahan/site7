@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+  <script>
+  
+    
+  
+  </script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Rounded Corners</h2>
+  <p>The .rounded class adds rounded corners to an image:</p>            
+  <img id="img" src="https://www.w3schools.com/bootstrap4/cinqueterre.jpg" class="rounded" alt="Cinque Terre" width="304" height="236"> 
+  <img id="imgLocal" src="https://www.w3schools.com/bootstrap4/cinqueterre.jpg" class="rounded" alt="Cinque Terre" width="304" height="236"> 
+</div>
+
+<script>
+  
+    var images = [
+        'https://blogsimages.adobe.com/creativecloud/files/2016/09/code-10.png',
+        'https://cdn.pixabay.com/photo/2015/12/09/15/51/code-1084923_960_720.png',
+        'https://udemy-images.udemy.com/course/750x422/59535_1f48_6.jpg',
+        'https://images.unsplash.com/photo-1472495010058-65576a9959e4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80'
+    ];
+    var random = Math.floor(Math.random() * 4);
+    document.getElementById("img").src = images[random];
+    if(random == 0 || random == 3) {
+        ext = 'jpg';
+    } else {
+        ext = 'png';
+    }
+    // document.getElementById("imgLocal").src = 'images/img' + random + '.' + ext;
+    document.getElementById("imgLocal").src = `images/img${random}.${ext}`;
+
+  
+</script>
+
+
+</body>
+</html>
